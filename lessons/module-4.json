@@ -1,0 +1,40 @@
+{
+  "id": "module-4",
+  "title": "Risk & Governance",
+  "learning_objectives": [
+    "Identify key risks in enterprise LIMS/ELN projects.",
+    "Communicate governance and validation frameworks clearly.",
+    "Demonstrate Scifeon\u2019s ability to reduce risk through structure."
+  ],
+  "content": "<p>Enterprise buyers evaluate risk as seriously as functionality. A strong proposal describes <strong>how Scifeon manages risk</strong> across implementation, validation, and operation. Governance structures\u2014steering committees, escalation paths, documented responsibilities\u2014signal maturity and control. Include them proactively, not reactively.</p><p>When presenting validation, reference recognized frameworks such as <em>GAMP 5</em> or <em>21 CFR Part 11</em>. Show exactly how Scifeon\u2019s process produces traceable, auditable results. This reassures QA and Procurement that adopting Scifeon will not expose them to compliance uncertainty.</p>",
+  "exercises": [
+    {
+      "instruction": "Draft a short governance paragraph describing steering committee composition and meeting rhythm.",
+      "type": "writing"
+    },
+    {
+      "instruction": "List three project risks and one mitigation action for each.",
+      "type": "analysis"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does 'Governance' communicate to an enterprise buyer?",
+      "options": [
+        "Who manages the project and how decisions are made",
+        "Who attends demos",
+        "Which modules are included"
+      ],
+      "answer": "Who manages the project and how decisions are made"
+    },
+    {
+      "question": "Why reference GAMP 5 or 21 CFR Part 11?",
+      "options": [
+        "To sound technical",
+        "To prove compliance alignment and audit readiness",
+        "To fill document space"
+      ],
+      "answer": "To prove compliance alignment and audit readiness"
+    }
+  ]
+}

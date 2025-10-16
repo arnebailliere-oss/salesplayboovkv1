@@ -1,0 +1,40 @@
+{
+  "id": "module-3",
+  "title": "Proposal Structure & Tone",
+  "learning_objectives": [
+    "Understand the required structure of an enterprise proposal.",
+    "Write executive summaries that communicate business impact, not features.",
+    "Maintain a consistent and compliant tone throughout Scifeon documents."
+  ],
+  "content": "<p>Enterprise proposals follow a <strong>logical and audit-ready structure</strong>. Each section\u2014from Executive Summary to Technical Annex\u2014serves a defined purpose. Decision-makers often read only the first two pages, so the summary must <strong>teach value through clarity</strong>. Avoid emotional or marketing language. Replace adjectives with facts, outcomes, and validation points.</p><p>Use the playbook\u2019s template as your baseline. Every proposal must contain: cover letter, context, objectives, Scifeon overview, solution design, implementation plan, governance model, risk and mitigation, commercial terms, and annexes. The tone must remain factual and aligned with Scifeon\u2019s brand of precision and calm authority.</p>",
+  "exercises": [
+    {
+      "instruction": "Take one paragraph from a marketing flyer and rewrite it as an enterprise-style executive summary.",
+      "type": "rewrite"
+    },
+    {
+      "instruction": "List the mandatory sections of an enterprise proposal and their purpose.",
+      "type": "analysis"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the primary function of the Executive Summary?",
+      "options": [
+        "To list technical specifications",
+        "To educate decision-makers on business impact",
+        "To describe team culture"
+      ],
+      "answer": "To educate decision-makers on business impact"
+    },
+    {
+      "question": "Which tone best fits Scifeon\u2019s proposals?",
+      "options": [
+        "Neutral and factual",
+        "Enthusiastic and promotional",
+        "Casual and conversational"
+      ],
+      "answer": "Neutral and factual"
+    }
+  ]
+}

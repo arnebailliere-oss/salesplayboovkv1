@@ -1,0 +1,40 @@
+{
+  "id": "module-1",
+  "title": "Understanding the Buyer",
+  "learning_objectives": [
+    "Identify key stakeholder roles in a typical enterprise laboratory environment.",
+    "Learn how to tailor Scifeon\u2019s message to each stakeholder type.",
+    "Understand how enterprise buyers evaluate credibility and technical fit."
+  ],
+  "content": "<p>Enterprise buying is <strong>multi-stakeholder</strong>. No single person decides. Each persona\u2014QA Manager, IT Lead, Lab Director, Procurement Officer\u2014views Scifeon from a different angle. Successful sales communication aligns with their concerns: <em>QA wants validation traceability</em>, <em>IT needs data integrity and integration</em>, <em>Procurement demands predictable cost of ownership</em>.</p><p>Scifeon sales engagements must therefore map and document the buyer structure early. The buyer\u2019s internal project maturity determines both <strong>sales speed</strong> and <strong>negotiation position</strong>. Always prepare a stakeholder matrix with their roles, interests, and risks addressed explicitly in your presentation or proposal.</p>",
+  "exercises": [
+    {
+      "instruction": "Create a 4-cell table linking stakeholder type to their top concern.",
+      "type": "analysis"
+    },
+    {
+      "instruction": "Review a previous demo or meeting and note which stakeholder concerns were not covered.",
+      "type": "reflection"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which stakeholder is most concerned with 21 CFR Part 11 compliance?",
+      "options": [
+        "Lab User",
+        "QA Manager",
+        "Marketing Lead"
+      ],
+      "answer": "QA Manager"
+    },
+    {
+      "question": "Why should we document stakeholder mapping early?",
+      "options": [
+        "To speed up invoicing",
+        "To align messaging and reduce risk of miscommunication",
+        "To meet internal KPIs"
+      ],
+      "answer": "To align messaging and reduce risk of miscommunication"
+    }
+  ]
+}

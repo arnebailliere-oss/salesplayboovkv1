@@ -1,0 +1,40 @@
+{
+  "id": "module-6",
+  "title": "Language & Localization Standards",
+  "learning_objectives": [
+    "Apply Scifeon\u2019s approved phrasing and tone in all English and German materials.",
+    "Ensure translations retain compliance and precision.",
+    "Use language that reflects Scifeon\u2019s credibility and calm authority."
+  ],
+  "content": "<p>Language consistency reinforces brand trust. Enterprise readers judge professionalism by <strong>tone, phrasing, and terminology accuracy</strong>. Scifeon language is clear, neutral, and compliant. Avoid emotional terms and startup jargon. Phrases like \u201cfastest\u201d or \u201ccutting-edge\u201d should be replaced with verifiable outcomes such as \u201cvalidated for regulated environments.\u201d</p><p>When localizing to German, maintain semantic precision and avoid colloquialisms. The tone must remain <strong>formal and confident</strong>, never promotional. Each proposal or presentation must pass a final language check against the approved phrasing library in the playbook.</p>",
+  "exercises": [
+    {
+      "instruction": "Rewrite three marketing-style sentences into compliant, factual phrasing.",
+      "type": "rewrite"
+    },
+    {
+      "instruction": "Translate one paragraph from English to German while preserving enterprise tone.",
+      "type": "translation"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What defines Scifeon\u2019s tone in enterprise communication?",
+      "options": [
+        "Confident and factual",
+        "Enthusiastic and emotional",
+        "Friendly and casual"
+      ],
+      "answer": "Confident and factual"
+    },
+    {
+      "question": "Why is language consistency critical in proposals?",
+      "options": [
+        "To improve SEO",
+        "To maintain professional credibility and compliance perception",
+        "To reduce writing time"
+      ],
+      "answer": "To maintain professional credibility and compliance perception"
+    }
+  ]
+}

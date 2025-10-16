@@ -1,0 +1,40 @@
+{
+  "id": "module-5",
+  "title": "Process Discipline (QA & Versioning)",
+  "learning_objectives": [
+    "Implement Scifeon\u2019s internal QA and version control procedures during proposal development.",
+    "Ensure every document is reviewable and traceable.",
+    "Understand why discipline in document control builds customer trust."
+  ],
+  "content": "<p>Process discipline transforms Scifeon\u2019s work from ad hoc to auditable. Every proposal must follow <strong>defined QA checkpoints</strong>: internal review, cross-check, and version approval. Each stage must be documented in the version history section of the proposal template.</p><p>Enterprise clients expect <strong>traceability of authorship and approval</strong>. Missing version control or inconsistent formatting signals immaturity. Our goal is to show that Scifeon operates under the same standards we enable for our customers\u2014organized, validated, and documented.</p>",
+  "exercises": [
+    {
+      "instruction": "Simulate a proposal review by marking one draft with reviewer initials, date, and version comment.",
+      "type": "practical"
+    },
+    {
+      "instruction": "Identify three QA criteria that should be checked before submitting a proposal.",
+      "type": "analysis"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Why maintain a version history?",
+      "options": [
+        "To track aesthetic changes",
+        "To prove control and accountability",
+        "To fill template space"
+      ],
+      "answer": "To prove control and accountability"
+    },
+    {
+      "question": "What does missing QA documentation signal to a customer?",
+      "options": [
+        "Speed and flexibility",
+        "Lack of internal rigor",
+        "Innovation culture"
+      ],
+      "answer": "Lack of internal rigor"
+    }
+  ]
+}

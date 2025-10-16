@@ -1,0 +1,40 @@
+{
+  "id": "module-2",
+  "title": "Challenger Sales Method",
+  "learning_objectives": [
+    "Apply the Teach\u2013Tailor\u2013Take Control framework in Scifeon sales dialogues.",
+    "Formulate insight statements that create constructive tension.",
+    "Maintain control of the sales process while staying consultative."
+  ],
+  "content": "<p>The <strong>Challenger Sales Method</strong> is Scifeon\u2019s foundation for enterprise conversations. It consists of three pillars: <strong>Teach</strong> \u2013 deliver an unexpected but relevant insight; <strong>Tailor</strong> \u2013 adapt your message to each stakeholder; <strong>Take Control</strong> \u2013 lead the process confidently without aggression.</p><p>In practice, this means identifying patterns in how labs lose efficiency or compliance control and teaching those patterns back to the customer with evidence. The goal is not persuasion but <strong>professional education</strong>\u2014helping the buyer see their process differently. Taking control means defining next steps clearly and respectfully.</p>",
+  "exercises": [
+    {
+      "instruction": "Draft one 'insight paragraph' that teaches a new perspective about digital lab compliance.",
+      "type": "writing"
+    },
+    {
+      "instruction": "Write one example of a 'take control' sentence you could use at the end of a meeting.",
+      "type": "writing"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What is the purpose of the 'Teach' stage?",
+      "options": [
+        "To present Scifeon\u2019s feature list",
+        "To deliver a new perspective supported by data",
+        "To summarize customer requirements"
+      ],
+      "answer": "To deliver a new perspective supported by data"
+    },
+    {
+      "question": "What defines 'Taking Control' in enterprise sales?",
+      "options": [
+        "Insisting on next steps",
+        "Setting a clear process while respecting the buyer\u2019s pace",
+        "Waiting for the buyer to decide timing"
+      ],
+      "answer": "Setting a clear process while respecting the buyer\u2019s pace"
+    }
+  ]
+}

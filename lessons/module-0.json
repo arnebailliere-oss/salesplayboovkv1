@@ -1,0 +1,40 @@
+{
+  "id": "module-0",
+  "title": "Enterprise Mindset",
+  "learning_objectives": [
+    "Understand the difference between startup and enterprise sales logic.",
+    "Recognize why large organizations prioritize risk reduction, compliance, and consistency over innovation rhetoric.",
+    "Adopt the Scifeon tone and behavioral standards when addressing enterprise clients."
+  ],
+  "content": "<p>Enterprise sales require a disciplined mindset focused on <strong>credibility, predictability, and control</strong>. Unlike startup sales, which rely on enthusiasm and rapid iteration, enterprise clients measure value through <strong>risk mitigation and operational reliability</strong>. Scifeon positions itself as a long-term enabler of compliant and data-driven workflows. Every interaction, presentation, and proposal must reflect this maturity.</p><p>Our internal goal is to <strong>replace improvisation with structured professionalism</strong>. This means documented decision logic, traceable actions, and measurable commitments. Adopting the enterprise mindset ensures that Scifeon is perceived as a stable, reliable partner rather than a promising but unstructured vendor.</p>",
+  "exercises": [
+    {
+      "instruction": "List three signs that a potential customer operates with an enterprise mindset.",
+      "type": "reflection"
+    },
+    {
+      "instruction": "Rewrite one of your last email introductions in a tone suitable for an enterprise prospect.",
+      "type": "rewrite"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Which factor defines enterprise decision-making?",
+      "options": [
+        "Innovation speed",
+        "Predictability and risk control",
+        "Personal relationships"
+      ],
+      "answer": "Predictability and risk control"
+    },
+    {
+      "question": "What should every Scifeon proposal demonstrate?",
+      "options": [
+        "Flexibility and creativity",
+        "Compliance and governance alignment",
+        "Informal collaboration"
+      ],
+      "answer": "Compliance and governance alignment"
+    }
+  ]
+}
