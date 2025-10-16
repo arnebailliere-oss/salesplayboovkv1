@@ -10,15 +10,7 @@ const lessonContent = document.getElementById("lessonContent");
 
 // ---------- LOAD LESSONS ----------
 async function loadLessonList() {
-  const lessonFiles = [
-    "module-0.json",
-    "module-1.json",
-    "module-2.json",
-    "module-3.json",
-    "module-4.json",
-    "module-5.json",
-    "module-6.json"
-  ];
+  const lessonFiles = ["module-0.json"];
 
   lessons = await Promise.all(
     lessonFiles.map(async (file) => {
@@ -138,4 +130,5 @@ function checkQuiz(lesson) {
 
 // ---------- INIT ----------
 document.addEventListener("DOMContentLoaded", loadLessonList);
+
 
