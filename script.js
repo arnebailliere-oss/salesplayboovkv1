@@ -1,77 +1,141 @@
-const lessons = [
-  { id: "module-0", title: "Enterprise Mindset" },
-  { id: "module-1", title: "Understanding the Buyer" },
-  { id: "module-2", title: "Challenger Sales Method" },
-  { id: "module-3", title: "Proposal Structure & Tone" },
-  { id: "module-4", title: "Risk & Governance" },
-  { id: "module-5", title: "Process Discipline (QA & Versioning)" },
-  { id: "module-6", title: "Language & Localization Standards" }
-];
+// =====================================================
+// Scifeon Sales Academy Interactive Training Engine
+// =====================================================
 
-const list = document.getElementById("lesson-list");
-const container = document.getElementById("lesson-container");
+// ---------- GLOBAL VARIABLES ----------
+let lessons = [];
+let currentLessonIndex = 0;
+const lessonList = document.getElementById("lessonList");
+const lessonContent = document.getElementById("lessonContent");
 
-// Build sidebar navigation
-lessons.forEach(l => {
-  const btn = document.createElement("button");
-  btn.textContent = l.title;
-  btn.onclick = () => loadLesson(l.id, btn);
-  list.appendChild(btn);
-});
+// ---------- LOAD LESSONS ----------
+async function loadLessonList() {
+  const lessonFiles = [
+    "module-0.json",
+    "module-1.json",
+    "module-2.json",
+    "module-3.json",
+    "module-4.json",
+    "module-5.json",
+    "module-6.json"
+  ];
 
-// Load first lesson by default
-loadLesson("module-0");
+  lessons = await Promise.all(
+    lessonFiles.map(async (file) => {
+      try {
+        const response = await fetch(`lessons/${file}`);
+        if (!response.ok) throw new Error(`Could not load ${file}`);
+        return await response.json();
+      } catch (e) {
+        console.error(e);
+        return null;
+      }
+    })
+  );
 
-function loadLesson(id, activeBtn) {
-  if (activeBtn) {
-    document.querySelectorAll("#lesson-list button").forEach(b => b.classList.remove("active"));
-    activeBtn.classList.add("active");
-  }
-  fetch(`lessons/${id}.json`)
-    .then(r => r.json())
-    .then(data => renderLesson(data))
-    .catch(err => {
-      container.innerHTML = `<p style='color:red'>Could not load lesson: ${err}</p>`;
-    });
+  renderLessonList();
 }
 
-function renderLesson(data) {
-  let html = `<h2>${data.title}</h2>${data.content}`;
+// ---------- RENDER LESSON LIST ----------
+function renderLessonList() {
+  lessonList.innerHTML = "";
+  lessons.forEach((lesson, index) => {
+    if (!lesson) return;
+    const li = document.createElement("li");
+    li.textContent = lesson.title;
+    li.className = "lesson-item";
 
-  if (data.exercises?.length) {
-    html += `<div class='exercise'><h3>Exercises</h3><ul>`;
-    data.exercises.forEach(ex => {
-      html += `<li>${ex.instruction}</li>`;
+    const progress = localStorage.getItem(lesson.id);
+    if (progress === "complete") li.classList.add("complete");
+
+    li.addEventListener("click", () => loadLesson(index));
+    lessonList.appendChild(li);
+  });
+}
+
+// ---------- LOAD LESSON ----------
+function loadLesson(index) {
+  const lesson = lessons[index];
+  if (!lesson) return;
+  currentLessonIndex = index;
+
+  let html = `
+    <h2>${lesson.title}</h2>
+    ${lesson.content || ""}
+  `;
+
+  // If lesson contains structured quiz data
+  if (lesson.quiz && Array.isArray(lesson.quiz)) {
+    html += `<h3>Knowledge Check</h3>`;
+    lesson.quiz.forEach((q, qi) => {
+      html += `
+        <div class="quiz-question" data-q="${qi}">
+          <p><strong>${qi + 1}. ${q.question}</strong></p>
+          ${q.options
+            .map(
+              (opt, oi) =>
+                `<label class="option"><input type="radio" name="q${qi}" value="${oi}"> ${opt}</label>`
+            )
+            .join("<br>")}
+          <div class="quiz-feedback" id="feedback-${qi}"></div>
+        </div>
+      `;
     });
-    html += `</ul></div>`;
+
+    html += `<button id="checkAnswers">Check Answers</button>`;
+    html += `<div id="scoreSummary"></div>`;
   }
 
-  if (data.quiz?.length) {
-    html += `<div class='quiz'><h3>Quiz</h3>`;
-    data.quiz.forEach((q, i) => {
-      html += `<div class='quiz-question'>
-        <strong>${i + 1}. ${q.question}</strong>`;
-      q.options.forEach(opt => {
-        html += `<label class='quiz-option'>
-          <input type='radio' name='q${i}' value='${opt}'> ${opt}
-        </label>`;
-      });
-      html += `</div>`;
-    });
-    html += `<button class='submit-quiz'>Check Answers</button></div>`;
-  }
+  lessonContent.innerHTML = html;
 
-  container.innerHTML = html;
+  const checkBtn = document.getElementById("checkAnswers");
+  if (checkBtn) checkBtn.addEventListener("click", () => checkQuiz(lesson));
+}
 
-  const btn = container.querySelector(".submit-quiz");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      let score = 0;
-      data.quiz.forEach((q, i) => {
-        const chosen = document.querySelector(`input[name=q${i}]:checked`);
-        if (chosen && chosen.value === q.answer) score++;
-      });
-      alert(`Score: ${score}/${data.quiz.length}`);
-    });
+// ---------- QUIZ CHECKING FUNCTION ----------
+function checkQuiz(lesson) {
+  let score = 0;
+  lesson.quiz.forEach((q, qi) => {
+    const selected = document.querySelector(
+      `input[name="q${qi}"]:checked`
+    );
+    const feedbackDiv = document.getElementById(`feedback-${qi}`);
+
+    if (!selected) {
+      feedbackDiv.innerHTML =
+        "<p style='color:gray'>No answer selected.</p>";
+      return;
+    }
+
+    const selectedIndex = parseInt(selected.value);
+    const isCorrect = selectedIndex === q.answer;
+
+    if (isCorrect) {
+      score++;
+      feedbackDiv.innerHTML = `<p style='color:green'><strong>Correct:</strong> ${q.explanation}</p>`;
+    } else {
+      feedbackDiv.innerHTML = `<p style='color:red'><strong>Incorrect:</strong> ${q.explanation}</p>`;
+    }
+  });
+
+  const total = lesson.quiz.length;
+  const percent = Math.round((score / total) * 100);
+  const summary = document.getElementById("scoreSummary");
+
+  let color =
+    percent >= 80 ? "green" : percent >= 50 ? "orange" : "red";
+
+  summary.innerHTML = `
+    <h4 style='color:${color}'>You scored ${score}/${total} (${percent}%)</h4>
+  `;
+
+  // Mark progress complete
+  if (percent >= 80) {
+    localStorage.setItem(lesson.id, "complete");
+    renderLessonList();
   }
 }
+
+// ---------- INIT ----------
+document.addEventListener("DOMContentLoaded", loadLessonList);
+
